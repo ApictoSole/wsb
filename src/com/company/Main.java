@@ -13,6 +13,7 @@ public class Main {
         me.lastName = "Mazur";
         me.pet = new Animal("dog");
         Car shelbygt= new Car("Ford", "Mustang", 2130, 340, 230000.0);
+        Car shelbygtbusted = new Car("Ford", "Mustang", 2130, 340, 230000.0);
         me.setVehicle(shelbygt);
         me.pet.feed();
         me.pet.takeForAWalk();
@@ -36,5 +37,10 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.feed();
         me.pet.takeForAWalk();
+        System.out.println("_ _ _ _ _");
+        System.out.println(shelbygt == shelbygtbusted);
+        System.out.println(shelbygt);
+        System.out.println(shelbygtbusted);
+        System.out.println(me.pet);
     }
 }

@@ -1,5 +1,6 @@
 package com.company;
 
+
 import com.company.devices.Car;
 import java.time.LocalDateTime;
 
@@ -34,6 +35,7 @@ public class Human {
             this.salary = salary;
         }
     }
+
     public Car getVehicle() {
         return vehicle;
     }
@@ -48,5 +50,18 @@ public class Human {
         } else {
             System.out.println("You can't afford it, better become a programmer");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", pet=" + pet +
+                ", vehicle=" + vehicle +
+                ", salary=" + salary +
+                ", salaryLastAccessDateTime=" + salaryLastAccessDateTime +
+                ", salaryLastAccessValue=" + salaryLastAccessValue +
+                '}';
     }
 }

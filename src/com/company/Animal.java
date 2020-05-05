@@ -41,4 +41,11 @@ public class Animal {
         }
         else System.out.println("I'm not zombie i cant walk when i am dead");
     }
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }
