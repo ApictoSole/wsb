@@ -1,10 +1,12 @@
 package com.company;
 
 import com.company.devices.Car;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
 
     public static void main(String[] args) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
         Human me = new Human();
 
         me.firstName = "Bartosz";
