@@ -8,7 +8,7 @@ public class Human {
     String firstName;
     String lastName;
     Animal pet;
-    Car vehicle;
+    private Car vehicle;
     private Double salary;
     private LocalDateTime salaryLastAccessDateTime;
     private Double salaryLastAccessValue;
@@ -32,6 +32,21 @@ public class Human {
         } else {
             System.out.println("change in payout");
             this.salary = salary;
+        }
+    }
+    public Car getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(Car newCar) {
+        if (this.salary > newCar.price) {
+            this.vehicle = newCar;
+            System.out.println("You bought new car for cash");
+        } else if (this.salary > (newCar.price / 12)) {
+            this.vehicle = newCar;
+            System.out.println("You got credit for this car ... RIP");
+        } else {
+            System.out.println("You can't afford it, better become a programmer");
         }
     }
 }

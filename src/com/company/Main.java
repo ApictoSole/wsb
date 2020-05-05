@@ -12,7 +12,8 @@ public class Main {
         me.firstName = "Bartosz";
         me.lastName = "Mazur";
         me.pet = new Animal("dog");
-        me.vehicle = new Car("Ford", "Mustang", 2130, 340);
+        Car shelbygt= new Car("Ford", "Mustang", 2130, 340, 230000.0);
+        me.setVehicle(shelbygt);
         me.pet.feed();
         me.pet.takeForAWalk();
         me.pet.feed();
