@@ -1,6 +1,9 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal {
+import com.company.Human;
+import com.company.Salleable;
+
+public abstract class Animal implements Salleable, Feedable {
     final String species;
     private Double weight;
 
@@ -25,12 +28,19 @@ public class Animal {
         return this.weight > 0;
     }
 
-    public void feed() {
+    public void Feed() {
         if (isAlive()) {
             this.weight++;
-            System.out.println("Fed. Weight increased to " + this.weight + " kg");
-        }
+           System.out.println("Fed. Weight increased to " + this.weight + " kg");
+       }
         else System.out.println("Call the shaman !!!");
+    }
+    public void Feed(Double foodWeight) {
+        if (isAlive()) {
+            this.weight += foodWeight;
+            System.out.println("I got fat " + this.weight + "kg");
+        }
+        else System.out.println("Nah, I am dead... i dont need food XD");
     }
 
     public void takeForAWalk() {
@@ -55,9 +65,8 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "species='" + species + '\'' +
-                ", weight=" + weight +
-                '}';
+        return "Animal" + "\n" +
+                "species " + species + "\n" +
+                " weight " + weight ;
     }
 }

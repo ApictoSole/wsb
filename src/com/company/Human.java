@@ -1,14 +1,16 @@
 package com.company;
 
+import com.company.creatures.Animal;
 import com.company.devices.Phone;
 import com.company.devices.Car;
+
 import java.time.LocalDateTime;
 
 
 public class Human {
     String firstName;
     String lastName;
-    Animal pet;
+    public Animal pet;
     private Car vehicle;
     private Double salary;
     private LocalDateTime salaryLastAccessDateTime;

@@ -1,8 +1,11 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import java.time.format.DateTimeFormatter;
 import com.company.devices.Phone;
+
 
 public class Main {
 
@@ -12,31 +15,32 @@ public class Main {
 
         me.firstName = "Bartosz";
         me.lastName = "Mazur";
-        me.pet = new Animal("dog");
+        me.pet = new Pet("dog");
         Car shelbygt= new Car("Ford", "Mustang",2014, 2130, 340, 230000.0);
         Car shelbygtbusted = new Car("Ford", "Mustang",2014 , 2130, 340, 230000.0);
         me.setVehicle(shelbygt);
-        me.pet.feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
-        me.pet.feed();
-        me.pet.feed();
+        me.pet.Feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
-        me.pet.feed();
-        me.pet.feed();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
+        me.pet.Feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
-        me.pet.feed();
-        me.pet.feed();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
+        me.pet.Feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
-        me.pet.feed();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.Feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
         System.out.println("_ _ _ _ _");
         System.out.println(shelbygt == shelbygtbusted);
