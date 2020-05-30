@@ -50,5 +50,22 @@ public class Main {
         phone.TurnOn();
         System.out.println(shelbygt.toString());
         System.out.println(phone.toString());
+
+        Human someoneElse = new Human();
+        me.cash = 16000.0;
+        someoneElse.cash = 17000.0;
+        me.telephone = phone;
+        me.getVehicle(shelbygt);
+        me.pet.Sell(me, someoneElse, 1500.0);
+        System.out.println("my cash " + me.cash + "\n" +
+        "Someone Else cash " + someoneElse.cash + "\n");
+        me.getGetVehicle().Sell(me, someoneElse, 14000.0);
+        System.out.println("my cash " + me.cash + "\n" +
+        "Someone Else cash " + someoneElse.cash + "\n");
+        me.telephone.Sell(me, someoneElse, 1000.0);
+        System.out.println("my cash " + me.cash + "\n" +
+        "Someone Else cash " + someoneElse.cash + "\n");
+
+
     }
 }

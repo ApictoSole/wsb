@@ -1,5 +1,7 @@
 package com.company.devices;
 
+import com.company.Human;
+
 public class Car extends Device {
     Integer displacement;
     Integer enginePower;
@@ -14,7 +16,17 @@ public class Car extends Device {
         this.price = price;
 
     }
-
+    public void Sell(Human seller, Human buyer, Double price) {
+        if (buyer.getCash() >= price) {
+            buyer.setCash(buyer.getCash() - price);
+            seller.setCash(seller.getCash() + price);
+            buyer.getVehicle(seller.getGetVehicle());
+            seller.unsetVehicle();
+            System.out.println("Car Sold!");
+        } else {
+            System.out.println("not enough cash.");
+        }
+    }
     @Override
     public void TurnOn() {
         System.out.println("Turn On Car");

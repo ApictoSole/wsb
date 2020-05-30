@@ -40,6 +40,19 @@ public class Animal {
         }
         else System.out.println("I'm not zombie i cant walk when i am dead");
     }
+
+    public void Sell(Human seller, Human buyer, Double price) {
+        if (buyer.getCash() >= price) {
+            buyer.setCash(buyer.getCash() - price);
+            seller.setCash(seller.getCash() + price);
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            System.out.println("Yey new pet");
+        } else {
+            System.out.println("not enough cash");
+        }
+    }
+
     @Override
     public String toString() {
         return "Animal{" +

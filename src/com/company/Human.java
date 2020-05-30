@@ -1,8 +1,7 @@
 package com.company;
 
-
+import com.company.devices.Phone;
 import com.company.devices.Car;
-
 import java.time.LocalDateTime;
 
 
@@ -14,9 +13,11 @@ public class Human {
     private Double salary;
     private LocalDateTime salaryLastAccessDateTime;
     private Double salaryLastAccessValue;
+    public Double cash;
+    public Phone telephone;
 
     public Human() {
-        this.salary = 2450.0;
+        this.salary = 6550.0;
         this.salaryLastAccessDateTime = LocalDateTime.now();
         this.salaryLastAccessValue = this.salary;
     }
@@ -36,11 +37,25 @@ public class Human {
             this.salary = salary;
         }
     }
-
-    public Car getVehicle() {
-        return vehicle;
+    public  Double getCash() {
+        return cash;
+    }
+    public void setCash(Double cash){
+        this.cash = cash;
     }
 
+   // public Car getVehicle() {
+   //     return vehicle;
+   // }
+    public void getVehicle(Car acutalCar){
+        this.vehicle = acutalCar;
+    }
+    public void unsetVehicle(){
+        this.vehicle = null;
+    }
+    public Car getGetVehicle() {
+        return vehicle;
+    }
     public void setVehicle(Car newCar) {
         if (this.salary > newCar.price) {
             this.vehicle = newCar;
@@ -65,4 +80,5 @@ public class Human {
                 ", salaryLastAccessValue=" + salaryLastAccessValue +
                 '}';
     }
+
 }
