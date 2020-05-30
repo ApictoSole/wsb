@@ -2,10 +2,11 @@ package com.company.devices;
 
 import com.company.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     Integer displacement;
     Integer enginePower;
     public Double price;
+    public abstract void Refuel();
 
     public Car(String manufacturer, String model, Integer yearOfProduction, Integer displacement, Integer enginePower, Double price) {
         super(yearOfProduction, manufacturer, model);
@@ -27,6 +28,7 @@ public class Car extends Device {
             System.out.println("not enough cash.");
         }
     }
+
     @Override
     public void TurnOn() {
         System.out.println("Turn On Car");

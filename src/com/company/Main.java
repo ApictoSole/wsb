@@ -3,6 +3,9 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
+import com.company.devices.Diesel;
+import com.company.devices.Electric;
+import com.company.devices.LPG;
 import java.time.format.DateTimeFormatter;
 import com.company.devices.Phone;
 
@@ -16,8 +19,10 @@ public class Main {
         me.firstName = "Bartosz";
         me.lastName = "Mazur";
         me.pet = new Pet("dog");
-        Car shelbygt= new Car("Ford", "Mustang",2014, 2130, 340, 230000.0);
-        Car shelbygtbusted = new Car("Ford", "Mustang",2014 , 2130, 340, 230000.0);
+        LPG shelbygt= new LPG("Ford", "Mustang",2014, 2130, 340, 230000.0);
+        LPG shelbygtbusted = new LPG("Ford", "Mustang",2014 , 2130, 340, 230000.0);
+        Electric cinquecento = new Electric("Fiat", "Cinquecento Electtra", 1996,30,15, 1500.0);
+        Diesel passat = new Diesel("Volkswagen","Passat",2001, 1092, 101, 10000.0);
         me.setVehicle(shelbygt);
         me.pet.Feed();
         me.pet.takeForAWalk();
