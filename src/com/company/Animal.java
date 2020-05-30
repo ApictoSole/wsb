@@ -16,9 +16,8 @@ public class Animal {
             case "myszojeleń":
                 this.weight = 5.5;
                 break;
-            default:
-                this.weight = 1.0;
-                break;
+
+
         }
     }
 

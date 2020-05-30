@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.devices.Car;
 import java.time.format.DateTimeFormatter;
+import com.company.devices.Phone;
 
 public class Main {
 
@@ -12,8 +13,8 @@ public class Main {
         me.firstName = "Bartosz";
         me.lastName = "Mazur";
         me.pet = new Animal("dog");
-        Car shelbygt= new Car("Ford", "Mustang", 2130, 340, 230000.0);
-        Car shelbygtbusted = new Car("Ford", "Mustang", 2130, 340, 230000.0);
+        Car shelbygt= new Car("Ford", "Mustang",2014, 2130, 340, 230000.0);
+        Car shelbygtbusted = new Car("Ford", "Mustang",2014 , 2130, 340, 230000.0);
         me.setVehicle(shelbygt);
         me.pet.feed();
         me.pet.takeForAWalk();
@@ -42,5 +43,12 @@ public class Main {
         System.out.println(shelbygt);
         System.out.println(shelbygtbusted);
         System.out.println(me.pet);
+
+
+        Phone phone = new Phone("huiawei", "F20",2021);
+        shelbygt.TurnOn();
+        phone.TurnOn();
+        System.out.println(shelbygt.toString());
+        System.out.println(phone.toString());
     }
 }
